@@ -24,7 +24,7 @@ class SporMerkezi:
 """
             print(mesaj)
             try:
-                secim = int(input("Seçiminiz: "))
+                secim = int(input("Yapacağınız İşlem: "))
             except:
                 print("Lütfen Sadece Rakam Giriniz!")
                 continue
@@ -50,7 +50,7 @@ class SporMerkezi:
         tekrar = int(input("Kaç Kurs Eklenecek: "))
         kurslar = []
         for x in range(tekrar):
-            kursid = input("KursID: ")
+            kursid = input("Kurs Numarasını Girin: ")
             try:
                 kurslar.append(self.Kurslar[kursid])
             except:
@@ -68,7 +68,7 @@ class SporMerkezi:
         print(metin)
         
     def KursiyerAra(self):
-        KursiyerID= int(input("KursiyerID: "))
+        KursiyerID= int(input("Kursiyer Numarasını Girin: "))
         status = True
         metin = ""
         kurs = "    -"
@@ -83,7 +83,7 @@ class SporMerkezi:
         else:
             print("Kursiyer Bulunamadı!")
     def KursiyerSil(self):
-        KursiyerID = int(input("KursiyerID: "))
+        KursiyerID = int(input("Kursiyer Numarasını Girin: "))
         status = True
         for kursiyer in self.Kursiyerler:
             if kursiyer["ID"] == KursiyerID:
@@ -95,7 +95,7 @@ class SporMerkezi:
         else:
             print(f"{KursiyerID} Numaralı Kursiyer Bulunamadı!")
     def KursiyerUcretHesapla(self):
-        KursiyerID = int(input("KursiyerID: "))
+        KursiyerID = int(input("Kursiyer Numarasını Girin: "))
         status = True
         for kursiyer in self.Kursiyerler:
             if kursiyer["ID"] == KursiyerID:
